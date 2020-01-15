@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2017 Zhihu Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources>
+
+    <color name="preview_bottom_toolbar_bg">#CC000000</color>
+    <color name="preview_bottom_size">#61FFFFFF</color>
+
+    <color name="appBlackAlpha30">#55222222</color>
+    <color name="appBlackAlpha20">#33222222</color>
+    <color name="appBlackAlpha10">#11222222</color>
+
+    <!--设计规范配色-->
+    <color name="appNormal">#00D4E7</color> <!--应用品牌色-->
+    <color name="appSupplement">#FAF4EB</color> <!--辅助色2-->
+    <color name="appSupplementDark">#C7A468</color>  <!--辅助色1-->
+    <color name="appYellow">#F7B500</color>  <!--辅助色2-->
+    <color name="appSuccess">#4CD964</color> <!--成功色-->
+    <color name="appFailed">#E62F5C</color> <!--失败色-->
+    <color name="appBlack">#222222</color> <!--黑色-->
+    <color name="appWhite">#FFFFFF</color> <!--白色-->
+    <color name="appDarkGray">#555555</color> <!--深灰色-->
+    <color name="appGray">#888888</color> <!--灰色-->
+    <color name="appLightGray">#CCCCCC</color> <!--浅灰色-->
+    <color name="appDarkWhite">#EDEDED</color> <!--深灰白色-->
+    <color name="appLightWhite">#F9F9F9</color> <!--浅灰白色-->
+    <color name="appLine">#EDEDED</color> <!--线条颜色-->
+    <color name="appBlackTransParent">#4D4D4D</color> <!--上传图片状态的背景图-->
+    <color name="appMessageWhite">#F5F5F5</color> <!--消息界面白色-->
+    <color name="appBrown">#C77D68</color>
+
+    <!--style color-->
+    <color name="colorPrimary">@color/appWhite</color>
+    <color name="colorPrimaryDark">@color/appDarkGray</color>
+    <color name="colorAccent">@color/appNormal</color>
+</resources>
