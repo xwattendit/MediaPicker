@@ -174,7 +174,7 @@ public class SelectedItemCollection {
             cause = mContext.getResources().getString(
                     R.string.error_over_count,
                     maxSelectable,
-                    mCollectionType == COLLECTION_IMAGE?"图片":"视频"
+                    (mCollectionType == COLLECTION_IMAGE?"图片":"视频")
             );
             return new IncapableCause(cause);
         } else if (typeConflict(item)) {
