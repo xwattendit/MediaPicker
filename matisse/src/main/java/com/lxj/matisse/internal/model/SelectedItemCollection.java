@@ -15,8 +15,8 @@
  */
 package com.lxj.matisse.internal.model;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -29,7 +29,6 @@ import com.lxj.matisse.internal.utils.PathUtils;
 import com.lxj.matisse.internal.utils.PhotoMetadataUtils;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -167,12 +166,11 @@ public class SelectedItemCollection {
         return mItems.contains(item);
     }
 
+    @SuppressLint("DefaultLocale")
     public IncapableCause isAcceptable(Item item) {
         if (maxSelectableReached()) {
             int maxSelectable = currentMaxSelectable();
-            String cause;
-            cause = mContext.getResources().getString(R.string.error_over_count);
-            return new IncapableCause(String.format(cause,maxSelectable, (mCollectionType == COLLECTION_IMAGE?"图片":"视频")));
+            return new IncapableCause(String.format("最多只能选择%d个%s",maxSelectable, (mCollectionType == COLLECTION_IMAGE?"图片":"视频")));
         } else if (typeConflict(item)) {
             return new IncapableCause(mContext.getString(R.string.error_type_conflict));
         }
