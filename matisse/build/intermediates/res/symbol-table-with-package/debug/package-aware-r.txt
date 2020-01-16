@@ -1179,6 +1179,7 @@ drawable ic_photo_camera_white_24dp
 drawable ic_play_circle_outline_white_48dp
 drawable ic_preview_radio_off
 drawable ic_preview_radio_on
+drawable loading_image
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1342,6 +1343,8 @@ id info
 id italic
 id item_touch_helper_previous_elevation
 id ivBack
+id ivPlay
+id ivThumbnail
 id iv_icon
 id jcameraview
 id labeled
@@ -1480,6 +1483,7 @@ id video_preview
 id view_offset_helper
 id view_overlay
 id visible
+id vvPreviewVideo
 id wrap_content
 id wrapper_controls
 id wrapper_reset_rotate
@@ -1563,6 +1567,7 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_media_selection
 layout fragment_preview_item
+layout fragment_preview_video
 layout layout_toast
 layout media_grid_content
 layout media_grid_item
@@ -1601,6 +1606,8 @@ menu ucrop_menu_activity
 mipmap empty_picture
 mipmap fail_picture
 mipmap public_back
+mipmap public_back_white
+mipmap public_loading
 mipmap public_media_tab1
 mipmap public_media_take
 mipmap public_s_dropdown

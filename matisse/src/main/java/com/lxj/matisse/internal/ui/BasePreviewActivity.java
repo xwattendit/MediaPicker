@@ -27,6 +27,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
 import androidx.viewpager.widget.ViewPager;
 
@@ -202,9 +203,12 @@ public abstract class BasePreviewActivity extends AppCompatActivity implements V
     public void onPageSelected(int position) {
         PreviewPagerAdapter adapter = (PreviewPagerAdapter) mPager.getAdapter();
         if (mPreviousPos != -1 && mPreviousPos != position) {
-            ((PreviewItemFragment) adapter.instantiateItem(mPager, mPreviousPos)).resetView();
-
             Item item = adapter.getMediaItem(position);
+            Object o = adapter.instantiateItem(mPager, mPreviousPos);
+            if (o instanceof PreviewItemFragment) {
+                ((PreviewItemFragment) o).resetView();
+            }
+            ((Fragment)o).onStop();
             if (mSpec.countable) {
                 int checkedNum = mSelectedCollection.checkedNumOf(item);
                 mCheckView.setCheckedNum(checkedNum);

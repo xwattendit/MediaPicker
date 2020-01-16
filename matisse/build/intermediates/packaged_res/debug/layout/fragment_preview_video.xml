@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <VideoView
+        android:id="@+id/vvPreviewVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:keepScreenOn="true"
+        android:background="@color/appBlack"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="fitCenter"
+        android:id="@+id/ivThumbnail"
+        android:background="@color/appBlack"
+        android:src="@mipmap/empty_picture"/>
+
+    <ImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/public_media_tab1"
+        android:visibility="visible"/>
+</RelativeLayout>

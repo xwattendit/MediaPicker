@@ -125,6 +125,7 @@ drawable ic_photo_camera_white_24dp
 drawable ic_play_circle_outline_white_48dp
 drawable ic_preview_radio_off
 drawable ic_preview_radio_on
+drawable loading_image
 id album_cover
 id album_media_count
 id album_name
@@ -145,6 +146,8 @@ id image_photo
 id image_switch
 id image_view
 id ivBack
+id ivPlay
+id ivThumbnail
 id iv_icon
 id jcameraview
 id listView
@@ -162,6 +165,7 @@ id tv_content
 id video_duration
 id video_play_button
 id video_preview
+id vvPreviewVideo
 layout activity_camera
 layout activity_matisse
 layout activity_media_preview
@@ -169,6 +173,7 @@ layout album_list_item
 layout camera_view
 layout fragment_media_selection
 layout fragment_preview_item
+layout fragment_preview_video
 layout layout_toast
 layout media_grid_content
 layout media_grid_item
@@ -177,6 +182,8 @@ layout popup_album
 mipmap empty_picture
 mipmap fail_picture
 mipmap public_back
+mipmap public_back_white
+mipmap public_loading
 mipmap public_media_tab1
 mipmap public_media_take
 mipmap public_s_dropdown

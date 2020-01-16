@@ -22,6 +22,7 @@ import android.view.ViewGroup;
 
 import com.lxj.matisse.internal.entity.Item;
 import com.lxj.matisse.internal.ui.PreviewItemFragment;
+import com.lxj.matisse.internal.ui.PreviewVideoFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +39,11 @@ public class PreviewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return PreviewItemFragment.newInstance(mItems.get(position));
+        Item item = mItems.get(position);
+        if (item.isVideo())
+            return PreviewVideoFragment.newInstance(item);
+        else
+            return PreviewItemFragment.newInstance(item);
     }
 
     @Override
