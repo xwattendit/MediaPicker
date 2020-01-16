@@ -29,12 +29,7 @@ public class AlbumPopup  {
         listView.setAdapter(this.adapter);
         listView.setOnItemClickListener(itemClickListener);
         popupContainer.setOnClickListener(v -> dismiss());
-        popupContainer.post(() -> {
-            popupContainer.setTranslationY(-popupContainer.getMeasuredHeight());
-            ViewGroup.LayoutParams params = listView.getLayoutParams();
-            params.height = Math.max(params.height, UIUtils.dp2px(activity, 360));
-            listView.setLayoutParams(params);
-        });
+        popupContainer.post(() -> popupContainer.setTranslationY(-popupContainer.getMeasuredHeight()));
     }
 
     public void show(){

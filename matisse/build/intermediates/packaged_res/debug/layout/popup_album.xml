@@ -3,20 +3,15 @@
     android:id="@+id/popupContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_above="@id/bottom_toolbar"
     android:layout_below="@id/toolbar"
     android:background="@color/appBlackAlpha10">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/appWhite">
-
-        <ListView
-            android:id="@+id/listView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:divider="@color/appLine"
-            android:dividerHeight="1px" />
-    </com.google.android.material.appbar.AppBarLayout>
+        android:background="@color/appWhite"
+        android:layout_marginBottom="66dp"
+        android:divider="@color/appLine"
+        android:dividerHeight="1px" />
 </FrameLayout>
