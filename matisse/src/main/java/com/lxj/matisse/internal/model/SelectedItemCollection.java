@@ -171,12 +171,8 @@ public class SelectedItemCollection {
         if (maxSelectableReached()) {
             int maxSelectable = currentMaxSelectable();
             String cause;
-            cause = mContext.getResources().getString(
-                    R.string.error_over_count,
-                    maxSelectable,
-                    (mCollectionType == COLLECTION_IMAGE?"图片":"视频")
-            );
-            return new IncapableCause(cause);
+            cause = mContext.getResources().getString(R.string.error_over_count);
+            return new IncapableCause(String.format(cause,maxSelectable, (mCollectionType == COLLECTION_IMAGE?"图片":"视频")));
         } else if (typeConflict(item)) {
             return new IncapableCause(mContext.getString(R.string.error_type_conflict));
         }
