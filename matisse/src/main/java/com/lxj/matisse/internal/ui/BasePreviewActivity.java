@@ -20,7 +20,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -55,8 +57,8 @@ public abstract class BasePreviewActivity extends AppCompatActivity implements V
     protected PreviewPagerAdapter mAdapter;
 
     protected CheckView mCheckView;
-    protected TextView mButtonBack;
-    protected TextView mButtonApply;
+    protected ImageView mButtonBack;
+    protected Button mButtonApply;
     protected TextView mSize;
 
     protected int mPreviousPos = -1;

@@ -34,18 +34,6 @@
         android:elevation="4dp"
         tools:targetApi="lollipop">
 
-        <TextView
-            android:id="@+id/button_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:foreground="?selectableItemBackground"
-            android:padding="16dp"
-            android:layout_gravity="start"
-            android:text="@string/button_back"
-            android:textColor="?attr/preview.bottomToolbar.back.textColor"
-            android:textSize="16sp"/>
-
-
         <LinearLayout
             android:layout_gravity="center"
             android:orientation="horizontal"
@@ -62,32 +50,35 @@
                 android:visibility="gone"/>
         </LinearLayout>
 
-
-
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/Button_Normal"
             android:id="@+id/button_apply"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:foreground="?selectableItemBackground"
-            android:padding="16dp"
-            android:textColor="?attr/preview.bottomToolbar.apply.textColor"
-            android:textSize="16sp"/>
+            android:layout_margin="16dp"
+            android:text="@string/button_sure"/>
 
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/top_toolbar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_margin="8dp"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"
+        android:layout_margin="6dp">
+
+        <ImageView
+            android:id="@+id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_gravity="start"
+            android:src="@mipmap/public_back_white"/>
 
         <com.lxj.matisse.internal.ui.widget.CheckView
             android:id="@+id/check_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="end"
             android:padding="10dp"/>
     </FrameLayout>
 
