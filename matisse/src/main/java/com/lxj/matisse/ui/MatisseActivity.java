@@ -342,8 +342,10 @@ public class MatisseActivity extends AppCompatActivity implements
         options.setRootViewBackgroundColor(Color.WHITE);
         options.setShowCropFrame(true);
         options.setCropFrameColor(Color.BLACK);
-        if (size != null)
-            options.withMaxResultSize(size.getWidth(),size.getHeight());
+        if (size != null) {
+            options.withMaxResultSize(size.getWidth(), size.getHeight());
+            options.withAspectRatio(size.getWidth(),size.getHeight());
+        }
         File cacheFile = new File(context.getCacheDir(), destinationFileName);
         UCrop.of(source, Uri.fromFile(cacheFile))
                 .withAspectRatio(1, 1)
