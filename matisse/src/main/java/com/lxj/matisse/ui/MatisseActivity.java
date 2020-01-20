@@ -332,16 +332,17 @@ public class MatisseActivity extends AppCompatActivity implements
         UCrop.Options options = new UCrop.Options();
         options.setCompressionQuality(90);
         options.setToolbarCancelDrawable(R.mipmap.public_back);
-        options.setToolbarWidgetColor(Color.BLACK);
-        options.setActiveWidgetColor(Color.BLACK);
-        options.setStatusBarColor(Color.WHITE);
-        options.setToolbarColor(Color.WHITE);
-        options.setDimmedLayerColor(Color.WHITE);
-        options.setCropFrameColor(Color.WHITE);
-        options.setCropGridColor(Color.BLACK);
-        options.setRootViewBackgroundColor(Color.WHITE);
+        options.setToolbarWidgetColor(Color.WHITE);
+        options.setActiveWidgetColor(Color.WHITE);
+        options.setStatusBarColor(Color.BLACK);
+        options.setToolbarColor(Color.BLACK);
+        options.setDimmedLayerColor(Color.BLACK);
+        options.setCropFrameColor(Color.parseColor("#77EEEEEE"));
+        options.setCropGridColor(Color.parseColor("#77EEEEEE"));
+        options.setRootViewBackgroundColor(Color.BLACK);
         options.setShowCropFrame(true);
-        options.setCropFrameColor(Color.BLACK);
+        options.setShowCropGrid(true);
+        options.setHideBottomControls(true);
         if (size != null) {
             options.withMaxResultSize(size.getWidth(), size.getHeight());
             options.withAspectRatio(size.getWidth(),size.getHeight());
