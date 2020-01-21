@@ -142,7 +142,7 @@ public class MatisseActivity extends AppCompatActivity implements
                 savedInstanceState = new Bundle();
             ArrayList<Item> value = new ArrayList<>(mSpec.selected);
             savedInstanceState.putParcelableArrayList(SelectedItemCollection.STATE_SELECTION, value);
-            if (value.get(0) != null) {
+            if (value.size() > 0 && value.get(0) != null) {
                 boolean image = MimeType.isImage(value.get(0).mimeType);
                 if (image)
                     savedInstanceState.putInt(SelectedItemCollection.STATE_COLLECTION_TYPE,SelectedItemCollection.COLLECTION_IMAGE);
@@ -177,7 +177,8 @@ public class MatisseActivity extends AppCompatActivity implements
         mSpec.onCheckedListener = null;
         mSpec.onSelectedListener = null;
         ImmersionBar.with(this).destroy();
-        mSpec.selected = null;
+        if (mSpec.selected != null)
+            mSpec.selected.clear();
     }
 
     @Override
